@@ -1,5 +1,14 @@
 .App {
   /* text-align: center; */
+  
+}
+
+.abc {
+  /* text-align: center; */
+  background-image: url("/Picture1.png");
+  background-repeat: repeat;
+  background-size: contain ;
+  text-align: left;
 }
 
 .App-logo {
@@ -18,7 +27,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;

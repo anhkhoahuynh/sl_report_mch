@@ -8,30 +8,29 @@ function App() {
     jsonFile
   )
   const columns = [
-    { title: "Site", field: "Site", sorting: false, cellStyle: { background:"#009688" }, headerStyle: { color: "#fff" } },
-    { title: "Product", field: "Product", filterPlaceholder: "filter" },
+    { title: "Site", field: "Site", sorting: true},
+    { title: "Product", field: "Product" },
     { title: "Parameter", field: "Parameter", align: "center", grouping: false },
-    {
-      title: "Temperature", field: "Temperature", emptyValue: () => <em>null</em>, searchable: false, export: false
-    },
-    { title: "Duration", field: "Duration", filterPlaceholder: "filter" },
-    { title: "Mean", field: "Mean", filterPlaceholder: "filter" },
-    { title: "Mode", field: "Mode", filterPlaceholder: "filter" },
-    { title: "Median", field: "Median", filterPlaceholder: "filter" },
-    { title: "Min", field: "Min", filterPlaceholder: "filter" },
-    { title: "Max", field: "Max", filterPlaceholder: "filter" },
-    { title: "Shapiro-Wilk test", field: "Shapiro-Wilk test", filterPlaceholder: "filter" },
-    { title: "Cp", field: "Cp", filterPlaceholder: "filter" },
-    { title: "Cpk", field: "Cpk", filterPlaceholder: "filter" },
-    { title: "%retention", field: "retention", filterPlaceholder: "filter" },
-    { title: "%Reduction_da_tru", field: "Reduction_da_tru", filterPlaceholder: "filter" },
-    { title: "%Reduction_chua_tru", field: "Reduction_chua_tru", filterPlaceholder: "filter" }
+    { title: "Temperature", field: "Temperature", emptyValue: () => <em>null</em>, searchable: false, export: false},
+    { title: "Duration", field: "Duration"},
+    { title: "Mean", field: "Mean"},
+    { title: "Mode", field: "Mode"},
+    { title: "Median", field: "Median"},
+    { title: "Min", field: "Min"},
+    { title: "Max", field: "Max"},
+    { title: "Shapiro-Wilk test", field: "Shapiro-Wilk test"},
+    { title: "Cp", field: "Cp"},
+    { title: "Cpk", field: "Cpk"},
+    { title: "%retention", field: "retention"},
+    { title: "%Reduction_da_tru", field: "Reduction_da_tru"},
+    { title: "%Reduction_chua_tru", field: "Reduction_chua_tru"}
   ]
   return (
     <div className="App">
-      <h1 align="center">Shelf-life report - QA MCH</h1>
-      <h4 align='center'>By Huynh Anh Khoa</h4>
-
+      <div className='abc'>
+        <h1 align="center">Shelf-life report - QA MCH </h1>
+        <h4 align='center'>By Huynh Anh Khoa</h4>
+      </div>
       <MaterialTable columns={columns} data={tableData}
         editable={{
           onRowAdd: (newRow) => new Promise((resolve, reject) => {
@@ -64,7 +63,7 @@ function App() {
           }),
           grouping: true, columnsButton: true,
           rowStyle: (data, index) => index % 2 === 0 ? { background: "#f5f5f5" } : null,
-          headerStyle: { background: "#f44336",color:"#fff"}
+          headerStyle: { background: "purple",color:"white"}
         }}
         title="Search" />
         <h2>hh</h2>
