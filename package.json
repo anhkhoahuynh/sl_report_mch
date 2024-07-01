@@ -12,7 +12,8 @@
     "material-table": "^1.69.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "hm:build": "node --max_old_space_size=4096 node_modules/@angular/cli/bin/ng build"
   },
   "scripts": {
     "start": "react-scripts start",
