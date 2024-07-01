@@ -12,8 +12,7 @@
     "material-table": "^1.69.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^5.0.1",
-    "build": "react-scripts --max_old_space_size=4096 build"
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -36,6 +35,10 @@
       "last 1 safari version"
     ]
   },
+
+
+  "start": "node --max_old_space_size=4096 node_modules/.bin/react-scripts start",
+  "build": "node --max_old_space_size=4096 node_modules/.bin/react-scripts build",
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
