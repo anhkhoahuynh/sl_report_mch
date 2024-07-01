@@ -51,11 +51,6 @@ function App() {
             setTimeout(() => resolve(), 1000)
           })
         }}  
-        actions={[
-          {
-            
-          }
-        ]}
         onSelectionChange={(selectedRows) => console.log(selectedRows)}
         options={{
           sorting: true, search: true,
@@ -64,7 +59,7 @@ function App() {
           paginationType: "stepped", showFirstLastPageButtons: false, paginationPosition: "both", exportButton: true,
           exportAllData: true, exportFileName: "TableData", addRowPosition: "first", actionsColumnIndex: -1, selection: true,
           showSelectAllCheckbox: false, showTextRowsSelected: false, selectionProps: rowData => ({
-            disabled: rowData.age == null,
+            disabled: rowData.age == null, 
             // color:"primary"
           }),
           grouping: true, columnsButton: true,
