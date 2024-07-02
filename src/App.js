@@ -5,11 +5,11 @@ import jsonFile from "./temp.json";
 import ReactDOM from 'react-dom';
 
 var password = "VinhHao";
-while (k != password) {
+while (k !== password) {
 var k = prompt("Nhập mật khẩu");
-if(k==password){alert('Mật khẩu đúng, nhấn Ok để tiếp tục')}
-else if (k != password) {
-  alert("Sai mật khẩu! Lêu lêu");
+if(k===password){alert('Mật khẩu đúng, nhấn Ok để tiếp tục')}
+else if (k !== password) {
+  alert("Sai mật khẩu! Hihi");
   }
 }
   
@@ -20,30 +20,26 @@ function App() {
   const columns = [
     { title: "Site", field: "Site", sorting: true},
     { title: "Product", field: "Product" },
-    { title: "Parameter", field: "Parameter", align: "center", grouping: false },
-    { title: "Temperature", field: "Temperature", emptyValue: () => <em>null</em>, searchable: false, export: false},
+    { title: "Parameter", field: "Parameter"},
+    { title: "Temperature", field: "Temperature"},
     { title: "Duration", field: "Duration"},
-    { title: "Mean", field: "Mean"},
-    { title: "Mode", field: "Mode"},
-    { title: "Median", field: "Median"},
-    { title: "Min", field: "Min"},
-    { title: "Max", field: "Max"},
-    { title: "Shapiro-Wilk test", field: "Shapiro-Wilk test"},
-    { title: "Cp", field: "Cp"},
-    { title: "Cpk", field: "Cpk"},
-    { title: "%retention", field: "%Retention"},
-    { title: "%Reduction_da_tru", field: "%Reduction_da_tru"},
-    { title: "%Reduction_chua_tru", field: "%Reduction_chua_tru"}
+    { title: "Mean", field: "Mean", grouping: false },
+    { title: "Mode", field: "Mode", grouping: false },
+    { title: "Median", field: "Median", grouping: false },
+    { title: "Min", field: "Min", grouping: false },
+    { title: "Max", field: "Max", grouping: false },
+    { title: "Shapiro-Wilk test", field: "Shapiro-Wilk test", grouping: false },
+    { title: "Cp", field: "Cp", grouping: false },
+    { title: "Cpk", field: "Cpk", grouping: false },
+    { title: "%retention", field: "%Retention", grouping: false },
+    { title: "%Reduction_da_tru", field: "%Reduction_da_tru", grouping: false },
+    { title: "%Reduction_chua_tru", field: "%Reduction_chua_tru", grouping: false }
   ]
-  
-
-
   return (
-    
     <div className="App">
       <div className='abc'>
-        <h1 align="center">Shelf-life report - QA MCH </h1>
-        <h4 align='center'>By Huynh Anh Khoa</h4>
+        <h1 align="center">Shelf-life report</h1>
+        <h2 align="center">QA MCH</h2>
       </div>
       <MaterialTable columns={columns} data={tableData}
         onSelectionChange={(selectedRows) => console.log(selectedRows)}
@@ -52,17 +48,15 @@ function App() {
           searchFieldAlignment: "right", searchAutoFocus: true, searchFieldVariant: "standard",
           filtering: true, paging: true, pageSizeOptions: [25, 50, 100], pageSize: 50,
           paginationType: "stepped", showFirstLastPageButtons: false, paginationPosition: "both", exportButton: true,
-          exportAllData: true, exportFileName: "TableData", addRowPosition: "first", actionsColumnIndex: -1, selection: true,
+          exportAllData: true, exportFileName: "TableData", actionsColumnIndex: -1, selection: false, index :true,
           showSelectAllCheckbox: false, showTextRowsSelected: false, selectionProps: rowData => ({
-            disabled: rowData.age == null, 
-            // color:"primary"
           }),
           grouping: true, columnsButton: true,
           rowStyle: (data, index) => index % 2 === 0 ? { background: "#f5f5f5" } : null,
-          headerStyle: { background: "purple",color:"white"}
+          headerStyle: { background: "#006600",color:"white"}
         }}
         title="Search" />
-        <h2>hh</h2>
+        <h4>By Huynh Anh Khoa</h4>
     </div>
   );
 }
