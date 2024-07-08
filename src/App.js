@@ -23,17 +23,17 @@ function App() {
     { title: "Parameter", field: "Parameter"},
     { title: "Temperature", field: "Temperature"},
     { title: "Duration", field: "Duration"},
-    { title: "Mean", field: "Mean", grouping: false },
+    { title: "Mean", field: "Trung_bình", grouping: false },
     { title: "Mode", field: "Mode", grouping: false },
     { title: "Median", field: "Median", grouping: false },
     { title: "Min", field: "Min", grouping: false },
     { title: "Max", field: "Max", grouping: false },
     { title: "Shapiro-Wilk test", field: "Shapiro-Wilk test", grouping: false },
-    { title: "Cp", field: "Cp", grouping: false },
-    { title: "Cpk", field: "Cpk", grouping: false },
+    //{ title: "Cp", field: "Cp", grouping: false },
+    //{ title: "Cpk", field: "Cpk", grouping: false },
     { title: "%retention", field: "%Retention", grouping: false },
-    { title: "%Reduction_da_tru", field: "%Reduction_da_tru", grouping: false },
-    { title: "%Reduction_chua_tru", field: "%Reduction_chua_tru", grouping: false }
+    { title: "%Reduction_da_tru", field: "%_seperative_reduction", grouping: false },
+    { title: "%Reduction_chua_tru", field: "%_accumulative_reduction", grouping: false }
   ]
   return (
     <div className="App">
