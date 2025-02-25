@@ -33,7 +33,8 @@ function App() {
     //{ title: "Cpk", field: "Cpk", grouping: false },
     { title: "%retention", field: "%Retention", grouping: false },
     { title: "%Reduction_da_tru", field: "%_seperative_reduction", grouping: false },
-    { title: "%Reduction_chua_tru", field: "%_accumulative_reduction", grouping: false }
+    { title: "%Reduction_chua_tru", field: "%_accumulative_reduction", grouping: false },
+    { title: "Count", field: "Count", grouping: false },
   ]
   return (
     <div className="App">
